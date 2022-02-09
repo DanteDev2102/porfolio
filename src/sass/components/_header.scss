@@ -1,0 +1,11 @@
+.header {
+	background-color: lighten($primary, 8%);
+	color: $font_color;
+	width: 100vw;
+	height: 75px;
+	display: flex;
+	padding: 0 1.3em;
+	align-items: center;
+	border-radius: 40px;
+	margin: 1% 0;
+}
