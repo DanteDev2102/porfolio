@@ -1,0 +1,16 @@
+.container {
+	color: darken($secondary, 15%);
+	font-size: 4rem;
+	font-weight: 100;
+	height: 100vh;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 15% 12%;
+}
+
+.link {
+	padding: 20px;
+	font-size: 1.5rem;
+	text-decoration: none;
+}
