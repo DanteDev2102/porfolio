@@ -1,18 +1,24 @@
 import React from 'react';
 import Typed from 'react-typed';
-import { Link } from 'react-router-dom';
 
-const description = ['Web Developer', 'Game Developer'];
+const description = [
+	'Web Developer',
+	'Game Developer',
+	'Security Analist'
+];
 
 const Home = () => {
 	return (
 		<section className="container">
 			<p className="container-text">
-				<span className="title">My name is Jose Acosta</span>
+				<span className="text title">
+					My name is <br /> Jose Acosta
+				</span>
 				<br />
-				<span className="description">
+				<span className="text description">
 					I´m{' '}
 					<Typed
+						className="text typed"
 						strings={description}
 						typeSpeed={70}
 						backSpeed={50}
@@ -20,9 +26,15 @@ const Home = () => {
 					/>
 				</span>
 				<br />
-				<Link className="link" to="/contact">
-					Download my cv
-				</Link>
+				<div className="link contain">
+					<a
+						className="link"
+						href="https://google.com"
+						target="__blank"
+					>
+						Download my cv
+					</a>
+				</div>
 			</p>
 		</section>
 	);

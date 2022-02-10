@@ -1,16 +1,47 @@
 .container {
-	color: darken($secondary, 15%);
-	font-size: 4rem;
+	font-size: 4em;
 	font-weight: 100;
 	height: 100vh;
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
-	margin: 15% 12%;
+	margin: 11% 12%;
 }
 
 .link {
-	padding: 20px;
-	font-size: 1.5rem;
+	background-color: lighten($primary, 8%);
 	text-decoration: none;
+	color: lighten($secondary, 6%);
+	font-family: SF Fedora titles;
+	&:hover {
+		text-decoration: underline;
+	}
+	&.contain {
+		padding: 20px;
+		margin-top: 15px;
+		font-size: 1.3rem;
+		text-decoration: none;
+		background-color: lighten($primary, 8%);
+		border-radius: 5px;
+		max-width: 11.6em;
+		cursor: pointer;
+	}
+}
+
+.text {
+	font-family: sans-serif;
+	&.title {
+		color: lighten($secondary, 15%);
+		font-size: 4.8rem;
+		font-weight: 200;
+		font-family: SF Fedora;
+	}
+	&.description {
+		color: $secondary;
+		font-family: SF Fedora;
+	}
+	&.typed {
+		color: lighten($alert, 15%);
+		font-family: SF Fedora;
+	}
 }
