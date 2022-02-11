@@ -2,7 +2,7 @@
 	background-color: lighten($primary, 8%);
 	font-family: SF Fedora Titles;
 	font-weight: 300;
-	color: $font_color;
+	color: $secondary;
 	width: 98vw;
 	height: 75px;
 	display: flex;
@@ -10,4 +10,10 @@
 	align-items: center;
 	border-radius: 40px;
 	margin: 1% 1%;
+}
+
+@media (max-width: 600px) {
+	.header {
+		display: none;
+	}
 }

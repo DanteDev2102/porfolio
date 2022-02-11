@@ -6,22 +6,22 @@
 }
 
 .navbar__navbar-list {
-	background-color: lighten($primary, 8%);
+	background-color: lighten($primary, 8);
 	list-style: none;
 	display: flex;
 	justify-content: space-around;
 }
 
 .navbar__list-item {
-	background-color: lighten($primary, 8%);
+	background-color: lighten($primary, 8);
 }
 
 .navbar__link {
-	color: #0e813c;
-	background-color: lighten($primary, 8%);
+	color: $secondary;
+	background-color: lighten($primary, 8);
 	text-decoration: none;
 	&:hover {
-		color: aqua;
+		color: darken($secondary, 45);
 		text-decoration: underline;
 	}
 }

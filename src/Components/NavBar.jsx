@@ -6,12 +6,12 @@ const NavBar = () => {
 		<nav className="navbar">
 			<ul className="navbar__navbar-list">
 				<li className="navbar__list-item">
-					<a className="navbar__link" href="#">
+					<a className="navbar__link" href="/">
 						/Home
 					</a>
 				</li>
 				<li className="navbar__list-item">
-					<a className="navbar__link" href="#">
+					<a className="navbar__link" href="/about">
 						/About me
 					</a>
 				</li>
