@@ -16,12 +16,12 @@ const NavBar = () => {
 					</a>
 				</li>
 				<li className="navbar__list-item">
-					<a className="navbar__link" href="#">
+					<a className="navbar__link" href="/projects">
 						/Projects
 					</a>
 				</li>
 				<li className="navbar__list-item">
-					<a className="navbar__link" href="#">
+					<a className="navbar__link" href="/contact">
 						/Contact
 					</a>
 				</li>

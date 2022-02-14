@@ -1,8 +1,14 @@
+// configs
 @import './config/global';
 @import './config/variables';
 @import './config/fuentes';
 
-@import './components/header';
-@import './components/navbar';
+// pages
 @import './pages/home';
 @import './pages/about';
+@import './pages/contact';
+
+// components
+@import './components/header';
+@import './components/navbar';
+@import './components/input';
