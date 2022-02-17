@@ -1,65 +1,101 @@
-import { useState } from 'react';
-import Input from '../Components/Input';
+import React from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import formSchema from '../Schemas/formSchema';
+import submitForm from '../helpers/submitForm';
+import Error from '../Components/Error';
+
+const initialValues = {
+	name: '',
+	lastname: '',
+	subject: '',
+	email: '',
+	message: ''
+};
 
 const Contact = () => {
-	const [form, setForm] = useState({
-		name: '',
-		lastname: '',
-		email: '',
-		subject: '',
-		message: ''
-	});
-	const inputs = ['name', 'lastname', 'email', 'subject'];
-	const handleChange = (e) => {
-		const { name, value } = e.target;
-		setForm({
-			...form,
-			[name]: value
-		});
-		console.log(form);
-	};
-	const handleBlur = (e) => {
-		console.log(form);
-	};
-	const handleSubmit = (e) => {
-		console.log(form);
-		e.preventDefault();
-	};
 	return (
-		<section className="form-container">
-			<form
-				className="form"
-				method="POST"
-				onSubmit={handleSubmit}
-			>
-				{inputs.map((input) => (
-					<Input
-						key={input}
-						name={input}
-						value={form[input]}
-						handleChange={handleChange}
-						handleBlur={handleBlur}
+		<Formik
+			initialValues={initialValues}
+			validationSchema={formSchema}
+			onSubmit={submitForm}
+		>
+			{({ errors }) => (
+				<Form>
+					{console.log(errors)}
+					<label>
+						Name:
+						<Field
+							name="name"
+							type="text"
+							placeholder="Jhon"
+						/>
+					</label>
+					<ErrorMessage
+						name="name"
+						component={() => (
+							<Error error={errors.name} />
+						)}
 					/>
-				))}
-				<label className="label">
-					Message:{' '}
-					<textarea
-						className="textarea input"
+					<label>
+						Lastname:
+						<Field
+							type="text"
+							name="lastname"
+							placeholder="Doe"
+						/>
+					</label>
+					<ErrorMessage
+						name="lastname"
+						component={() => (
+							<Error error={errors.lastname} />
+						)}
+					/>
+					<label>
+						Email:
+						<Field
+							name="email"
+							type="email"
+							placeholder="JhonDoe@email.com"
+						/>
+					</label>
+					<ErrorMessage
+						name="email"
+						component={() => (
+							<Error error={errors.email} />
+						)}
+					/>
+					<label>
+						Subject:
+						<Field
+							name="subject"
+							type="text"
+							placeholder="Subject..."
+						/>
+					</label>
+					<ErrorMessage
+						name="subject"
+						component={() => (
+							<Error error={errors.subject} />
+						)}
+					/>
+					<label>
+						Message:
+						<Field
+							name="message"
+							as="textarea"
+							placeholder="Message..."
+						/>
+					</label>
+					<ErrorMessage
 						name="message"
-						value={form.message}
-						onChange={handleChange}
-						onBlur={handleBlur}
+						component={() => (
+							<Error error={errors.message} />
+						)}
 					/>
-				</label>
-				<button className="btn">submit</button>
-			</form>
-			<section className="redes">
-				<h3>Mis Redes</h3>
-				<p>instagram</p>
-				<p>facebook</p>
-				<p>linkedin</p>
-			</section>
-		</section>
+					<button>submit</button>
+				</Form>
+			)}
+		</Formik>
 	);
 };
 
