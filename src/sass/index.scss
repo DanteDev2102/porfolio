@@ -1,14 +1,11 @@
-// configs
 @import './config/global';
 @import './config/variables';
 @import './config/fuentes';
 
-// pages
 @import './pages/home';
 @import './pages/about';
-//@import './pages/contact';
+@import './pages/contact';
 
-// components
 @import './components/header';
 @import './components/navbar';
 @import './components/error';

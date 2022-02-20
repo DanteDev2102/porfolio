@@ -16,7 +16,7 @@ const Home = () => {
 				</span>
 				<br />
 				<span className="text description">
-					I´m{' '}
+					I'm{' '}
 					<Typed
 						className="text typed"
 						strings={description}

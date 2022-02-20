@@ -15,9 +15,9 @@ const Contact = () => {
 			onSubmit={submitForm}
 		>
 			{({ errors }) => (
-				<>
-					<h2 className="title">Lets Talk</h2>
-					<Form className="form">
+				<section className="form-container">
+					<h2 className="title">Let's Talk</h2>
+					<Form>
 						{inputs.map((props) => (
 							<InputField
 								key={props.name}
@@ -25,9 +25,9 @@ const Contact = () => {
 								{...props}
 							/>
 						))}
-						<button className="submit">submit</button>
+						<button className="submit">Submit</button>
 					</Form>
-				</>
+				</section>
 			)}
 		</Formik>
 	);

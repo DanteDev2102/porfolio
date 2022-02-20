@@ -1,0 +1,30 @@
+.form-container {
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	justify-content: space-evenly;
+	& > .title {
+		color: lighten($alert, 15);
+		font-family: $fonts_title;
+		letter-spacing: 3px;
+		font-size: 5em;
+	}
+}
+
+.submit {
+	margin-top: 8px;
+	color: darken($secondary, 15);
+	height: 2.5em;
+	width: 6em;
+	border: none;
+	background-color: lighten($primary, 15);
+	font-family: $font_text;
+	font-size: 15px;
+	border-radius: 5px;
+	&:hover {
+		background-color: lighten($primary, 25);
+		color: darken($secondary, 25);
+		cursor: pointer;
+	}
+}

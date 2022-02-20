@@ -1,4 +1,5 @@
 .input-container {
+	margin-top: 3px;
 	color: lighten($secondary, 20);
 	font-family: $font_text;
 	& > .contact-title {
@@ -14,6 +15,7 @@
 			outline: $primary solid 3px;
 			background-color: lighten($primary, 65);
 			width: 30em;
+			padding: 10px;
 			&.textarea {
 				resize: none;
 				height: 8em;
