@@ -2,7 +2,7 @@ import React from 'react';
 import { Field, ErrorMessage } from 'formik';
 import Error from '../Components/Error';
 
-const InputField = ({ errors, name, type }) => {
+const InputField = ({ error, name, type }) => {
 	return (
 		<div className="input-container">
 			{type !== 'textarea' ? (
@@ -19,9 +19,7 @@ const InputField = ({ errors, name, type }) => {
 					</label>
 					<ErrorMessage
 						name={name}
-						component={() => (
-							<Error error={errors[name]} />
-						)}
+						component={() => <Error error={error} />}
 					/>
 				</>
 			) : (
@@ -38,9 +36,7 @@ const InputField = ({ errors, name, type }) => {
 					</label>
 					<ErrorMessage
 						name={name}
-						component={() => (
-							<Error error={errors[name]} />
-						)}
+						component={() => <Error error={error} />}
 					/>
 				</>
 			)}

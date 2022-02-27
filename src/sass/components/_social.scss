@@ -1,0 +1,21 @@
+.icon {
+	height: 40px;
+	margin-top: 25px;
+	margin-left: 10px;
+	color: lighten($primary, 15);
+	&.facebook:hover {
+		color: lighten(#3b5998, 5);
+	}
+	&.discord:hover {
+		color: lighten(#5865f2, 5);
+	}
+	&.github:hover {
+		color: darken(#222, 25);
+	}
+	&.telegram:hover {
+		color: #2aabee;
+	}
+	&.instagram:hover {
+		color: lighten(#8a3ab9, 5);
+	}
+}

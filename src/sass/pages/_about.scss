@@ -1,5 +1,5 @@
 .about {
-	height: 85vh;
+	height: 78vh;
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
@@ -8,11 +8,11 @@
 	& > .img-container {
 		max-height: 300px;
 		max-width: 300px;
-		border-radius: 50%;
 		& > .profile {
 			width: 100%;
 			height: auto;
 			object-fit: contain;
+			border-radius: 50%;
 		}
 	}
 	& > .info {
