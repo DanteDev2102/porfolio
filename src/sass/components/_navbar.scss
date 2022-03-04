@@ -24,4 +24,7 @@
 		color: darken($secondary, 45);
 		text-decoration: underline;
 	}
+	&:focus {
+		color: darken($secondary, 45);
+	}
 }
