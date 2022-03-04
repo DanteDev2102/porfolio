@@ -1,0 +1,40 @@
+.swiper-container {
+	display: flex;
+	height: 75vh;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #efefef;
+	& > .title {
+		margin-top: 25px;
+		margin-bottom: 25px;
+
+		font-size: 3em;
+		font-family: $fonts_title;
+		color: lighten($color: $alert, $amount: 15);
+	}
+	& > .mySwiper {
+		height: 45em;
+		width: 45em;
+		& > .swiper-button-prev {
+			background-color: transparent;
+			color: $secondary;
+		}
+		& > .swiper-button-next {
+			background-color: transparent;
+			color: $secondary;
+		}
+	}
+}
+
+.container-swiper-img {
+	background-size: 100% 100%;
+	border-radius: 15px;
+	background-size: 100% 100%;
+	& > .swiper-img {
+		height: 90%;
+		width: 100%;
+		object-fit: contain;
+	}
+}
