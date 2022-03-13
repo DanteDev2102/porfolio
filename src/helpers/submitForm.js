@@ -6,9 +6,8 @@ const submitForm = async (formContactValues, { resetForm }) => {
 		},
 		body: JSON.stringify(formContactValues)
 	});
-	const response = await sendFormData.json();
-	resetForm();
-	return response;
+	const { msg } = await sendFormData.json();
+	return msg;
 };
 
 export default submitForm;

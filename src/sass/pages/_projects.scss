@@ -5,14 +5,12 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	color: #efefef;
 	& > .title {
 		margin-top: 25px;
 		margin-bottom: 25px;
-
 		font-size: 3em;
 		font-family: $fonts_title;
-		color: lighten($color: $alert, $amount: 15);
+		color: lighten($alert, 15);
 	}
 	& > .mySwiper {
 		height: 45em;
@@ -29,12 +27,27 @@
 }
 
 .container-swiper-img {
-	background-size: 100% 100%;
-	border-radius: 15px;
-	background-size: 100% 100%;
 	& > .swiper-img {
-		height: 90%;
+		position: relative;
+		height: 88%;
 		width: 100%;
-		object-fit: contain;
+		object-fit: fill;
+	}
+	& > .view-links {
+		display: flex;
+		justify-content: space-around;
+		height: 35px;
+		& > .link {
+			display: flex;
+			height: 100%;
+			width: 100%;
+			margin-left: 3px;
+			margin-right: 3px;
+			align-items: center;
+			justify-content: center;
+			background-color: lighten($primary, 15);
+			color: $secondary;
+			border-radius: 3px;
+		}
 	}
 }

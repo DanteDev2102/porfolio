@@ -18,13 +18,34 @@ const Projects = () => {
 	return (
 		<section className="swiper-container animate__animated animate__fadeInLeft">
 			<h2 className="title">My Projects</h2>
-			<Swiper {...swiper} lazy>
-				{proyectos.map(({ img, key }) => (
+			<Swiper {...swiper} lazy="true">
+				{proyectos.map(({ img, key, code, demo }) => (
 					<SwiperSlide
 						key={key}
 						className="container-swiper-img"
-						style={{ backgroundImage: `url(${img})` }}
-					></SwiperSlide>
+					>
+						<img
+							className="swiper-img"
+							src={img}
+							alt={key}
+						/>
+						<div className="view-links">
+							<a
+								href={code}
+								target="__blank"
+								className="link"
+							>
+								code
+							</a>
+							<a
+								href={demo}
+								target="__blank"
+								className="link"
+							>
+								demo
+							</a>
+						</div>
+					</SwiperSlide>
 				))}
 			</Swiper>
 		</section>
