@@ -1,11 +1,8 @@
 import React from 'react';
 import Typed from 'react-typed';
+import cv from '../CV_José_Acosta.pdf';
 
-const description = [
-	'Web Developer',
-	'Game Developer',
-	'Security Analist'
-];
+const description = ['Web Developer', 'Game Developer', 'Pentester'];
 
 const Home = () => {
 	return (
@@ -29,8 +26,9 @@ const Home = () => {
 				<div className="link contain">
 					<a
 						className="link"
-						href="https://google.com"
+						href={cv}
 						target="__blank"
+						download="CV_José_Acosta"
 					>
 						Download my cv
 					</a>
