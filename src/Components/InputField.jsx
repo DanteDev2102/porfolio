@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 import { Field, ErrorMessage } from 'formik';
 import Error from '../Components/Error';
 
@@ -7,7 +7,6 @@ const InputField = ({ error, name, type }) => {
 		<div className="input-container">
 			{type !== 'textarea' ? (
 				<>
-					{' '}
 					<label className="contact-title">
 						{name.replace(/^./, name[0].toUpperCase())}:
 						<Field
@@ -44,4 +43,4 @@ const InputField = ({ error, name, type }) => {
 	);
 };
 
-export default InputField;
+export default memo(InputField);
