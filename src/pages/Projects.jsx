@@ -16,9 +16,9 @@ const swiper = {
 
 const Projects = () => {
 	return (
-		<section className="swiper-container">
+		<section className="swiper-container animate__animated animate__fadeInLeft">
 			<h2 className="title">My Projects</h2>
-			<Swiper {...swiper}>
+			<Swiper {...swiper} lazy>
 				{proyectos.map(({ img, key }) => (
 					<SwiperSlide
 						key={key}

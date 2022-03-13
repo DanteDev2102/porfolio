@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
 	return (
-		<section className="about">
+		<section className="about animate__animated animate__fadeInLeft">
 			<div className="img-container">
 				<img
 					className="profile"

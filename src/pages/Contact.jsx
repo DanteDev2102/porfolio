@@ -17,7 +17,7 @@ const Contact = () => {
 	return (
 		<Formik {...props}>
 			{({ errors }) => (
-				<div className="section-container">
+				<div className="section-container animate__animated animate__fadeInLeft">
 					<section className="form-container">
 						<h2 className="title">Let's Talk</h2>
 						<Form className="form">

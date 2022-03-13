@@ -6,7 +6,7 @@ const description = ['Web Developer', 'Game Developer', 'Pentester'];
 
 const Home = () => {
 	return (
-		<section className="container">
+		<section className="container animate__animated animate__fadeInLeft">
 			<p className="container-text">
 				<span className="text title">
 					My name is <br /> Jose Acosta
