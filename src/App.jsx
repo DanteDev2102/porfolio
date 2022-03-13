@@ -14,8 +14,8 @@ import Home from './pages/Home';
 const App = () => {
 	return (
 		<>
-			<Header />
 			<Router>
+				<Header />
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/about" element={<About />} />

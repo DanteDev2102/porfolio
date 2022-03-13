@@ -1,29 +1,30 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 	return (
 		<nav className="navbar">
 			<ul className="navbar__navbar-list">
 				<li className="navbar__list-item">
-					<a className="navbar__link" href="/">
+					<Link className="navbar__link" to="/">
 						/Home
-					</a>
+					</Link>
 				</li>
 				<li className="navbar__list-item">
-					<a className="navbar__link" href="/about">
+					<Link className="navbar__link" to="/about">
 						/About me
-					</a>
+					</Link>
 				</li>
 				<li className="navbar__list-item">
-					<a className="navbar__link" href="/projects">
+					<Link className="navbar__link" to="/projects">
 						/Projects
-					</a>
+					</Link>
 				</li>
 				<li className="navbar__list-item">
-					<a className="navbar__link" href="/contact">
+					<Link className="navbar__link" to="/contact">
 						/Contact
-					</a>
+					</Link>
 				</li>
 			</ul>
 		</nav>
